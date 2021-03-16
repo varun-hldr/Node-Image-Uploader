@@ -36,7 +36,7 @@ app.post("/upload", (req, res) => {
 
   const imagefile = req.files.image;
   if (
-    imagefile.mimetype === "image/jpg" ||
+    imagefile.mimetype === "image/jpeg" ||
     imagefile.mimetype === "image/png"
   ) {
     imagefile.mv(
