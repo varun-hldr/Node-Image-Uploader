@@ -2,7 +2,7 @@ const express = require("express");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
 
-const HOME_URL = "http://localhost:4000/";
+const HOME_URL = "https://my-image.herokuapp.com/";
 
 const app = express();
 
@@ -26,6 +26,10 @@ function makeid(length) {
 
 // static path
 app.use(express.static(__dirname + "/public/images"));
+
+app.get("/", (req, res) => {
+  res.send("Health OK");
+});
 
 app.post("/upload", (req, res) => {
   const imageName = makeid(5);
