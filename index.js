@@ -11,14 +11,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(fileUpload());
-// app.use(
-//   cors({
-//     origin: "*", // allow to server to accept request from different origin
-//     // origin: "https://agribazzar.herokuapp.com", // allow to server to accept request from different origin
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     credentials: true, // allow session cookie from browser to pass through
-//   })
-// );
+app.use(
+  cors({
+    // origin: "*", // allow to server to accept request from different origin
+    // origin: "https://agribazzar.herokuapp.com", // allow to server to accept request from different origin
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // allow session cookie from browser to pass through
+  })
+);
 
 // static path
 app.use(express.static(__dirname + "/public/images"));
