@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(fileUpload());
 app.use(
   cors({
-    origin: "http://localhost:3000", // allow to server to accept request from different origin
+    origin: "*", // allow to server to accept request from different origin
     // origin: "https://agribazzar.herokuapp.com", // allow to server to accept request from different origin
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // allow session cookie from browser to pass through
