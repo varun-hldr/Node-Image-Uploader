@@ -2,8 +2,8 @@ const express = require("express");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
 
-// const HOME_URL = "https://my-image.herokuapp.com/";
-const HOME_URL = "http://localhost:4000/";
+const HOME_URL = "https://my-image.herokuapp.com/";
+// const HOME_URL = "http://localhost:4000/";
 
 const app = express();
 
